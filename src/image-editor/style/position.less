@@ -1,0 +1,214 @@
+/* POSITION LEFT */
+.@{prefix}-container.left .@{prefix}-menu > .@{prefix}-item[tooltip-content]:before {
+	left: 28px;
+	top: 11px;
+	border-right: 7px solid #2f2f2f;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+}
+
+.@{prefix}-container.left .@{prefix}-menu > .@{prefix}-item[tooltip-content]:after {
+	top: 7px;
+	left: 42px;
+	white-space: nowrap;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu {
+	left: 0;
+	height: 100%;
+	width: 248px;
+}
+
+.@{prefix}-container.left .@{prefix}-main-container {
+	left: 64px;
+	width: calc(100% - 64px);
+	height: 100%;
+}
+
+.@{prefix}-container.left .@{prefix}-controls {
+	width: 64px;
+	height: 100%;
+	display: table;
+}
+
+/* POSITION LEFT & RIGHT */
+.@{prefix}-container.left .@{prefix}-menu,
+.@{prefix}-container.right .@{prefix}-menu {
+	white-space: inherit;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu,
+.@{prefix}-container.right .@{prefix}-submenu {
+	white-space: normal;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu > div,
+.@{prefix}-container.right .@{prefix}-submenu > div {
+	vertical-align: middle;
+}
+
+.@{prefix}-container.left .@{prefix}-controls li,
+.@{prefix}-container.right .@{prefix}-controls li {
+	display: inline-block;
+	margin: 4px auto;
+}
+
+.@{prefix}-container.left .@{prefix}-icpartition,
+.@{prefix}-container.right .@{prefix}-icpartition {
+	position: relative;
+	top: -7px;
+	width: 24px;
+	height: 1px;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu .@{prefix}-partition,
+.@{prefix}-container.right .@{prefix}-submenu .@{prefix}-partition {
+	display: block;
+	width: 75%;
+	margin: auto;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu .@{prefix}-partition > div,
+.@{prefix}-container.right .@{prefix}-submenu .@{prefix}-partition > div {
+	border-left: 0;
+	height: 10px;
+	border-bottom: 1px solid #3c3c3c;
+	width: 100%;
+	margin: 0;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu .@{prefix}-submenu-align,
+.@{prefix}-container.right .@{prefix}-submenu .@{prefix}-submenu-align {
+	margin-right: 0;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu .@{prefix}-submenu-item li,
+.@{prefix}-container.right .@{prefix}-submenu .@{prefix}-submenu-item li {
+	margin-top: 15px;
+}
+
+.@{prefix}-container.left .@{prefix}-submenu .@{prefix}-submenu-item .tui-colorpicker-clearfix li,
+.@{prefix}-container.right .@{prefix}-submenu .@{prefix}-submenu-item .tui-colorpicker-clearfix li {
+	margin-top: 0;
+}
+
+.@{prefix}-container.left .@{prefix}-checkbox-wrap.fixed-width,
+.@{prefix}-container.right .@{prefix}-checkbox-wrap.fixed-width {
+	width: 182px;
+	white-space: normal;
+}
+
+.@{prefix}-container.left .@{prefix}-range-wrap.@{prefix}-newline label.range,
+.@{prefix}-container.right .@{prefix}-range-wrap.@{prefix}-newline label.range {
+	display: block;
+	text-align: left;
+	width: 75%;
+	margin: auto;
+}
+
+.@{prefix}-container.left .@{prefix}-range,
+.@{prefix}-container.right .@{prefix}-range {
+	width: 136px;
+}
+
+/* POSITION RIGIHT */
+.@{prefix}-container.right .@{prefix}-menu > .@{prefix}-item[tooltip-content]:before {
+	left: -3px;
+	top: 11px;
+	border-left: 7px solid #2f2f2f;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+}
+
+.@{prefix}-container.right .@{prefix}-menu > .@{prefix}-item[tooltip-content]:after {
+	top: 7px;
+	left: unset;
+	right: 43px;
+	white-space: nowrap;
+}
+
+.@{prefix}-container.right .@{prefix}-submenu {
+	right: 0;
+	height: 100%;
+	width: 248px;
+}
+
+.@{prefix}-container.right .@{prefix}-main-container {
+	right: 64px;
+	width: calc(100% - 64px);
+	height: 100%;
+}
+
+.@{prefix}-container.right .@{prefix}-controls {
+	right: 0;
+	width: 64px;
+	height: 100%;
+	display: table;
+}
+
+/* POSITION TOP & BOTTOM */
+.@{prefix}-container.top .@{prefix}-submenu .@{prefix}-partition.only-left-right,
+.@{prefix}-container.bottom .@{prefix}-submenu .@{prefix}-partition.only-left-right {
+	display: none;
+}
+
+/* POSITION BOTTOM */
+.@{prefix}-container.bottom .tui-image-editor-submenu > div {
+	padding-bottom: 24px;
+}
+
+/* POSITION TOP */
+.@{prefix}-container.top .color-picker-control .triangle {
+	top: -8px;
+	border-right: 7px solid transparent;
+	border-top: 0;
+	border-left: 7px solid transparent;
+	border-bottom: 8px solid #fff;
+}
+
+.@{prefix}-container.top .@{prefix}-size-wrap {
+	height: 100%;
+}
+
+.@{prefix}-container.top .@{prefix}-main-container {
+	bottom: 0;
+}
+
+.@{prefix}-container.top .@{prefix}-menu > .@{prefix}-item[tooltip-content]:before {
+	left: 13px;
+	border-top: 0;
+	border-bottom: 7px solid #2f2f2f;
+	top: 33px;
+}
+
+.@{prefix}-container.top .@{prefix}-menu > .@{prefix}-item[tooltip-content]:after {
+	top: 38px;
+}
+
+.@{prefix}-container.top .@{prefix}-submenu {
+	top: 0;
+	bottom: inherit;
+}
+
+.@{prefix}-container.top .@{prefix}-submenu > div {
+	padding-top: 24px;
+	vertical-align: top;
+}
+
+.@{prefix}-container.top .@{prefix}-controls-logo {
+	display: table-cell;
+}
+
+.@{prefix}-container.top .@{prefix}-controls-buttons {
+	display: table-cell;
+}
+
+.@{prefix}-container.top .@{prefix}-main {
+	top: 64px;
+	height: calc(100% - 64px);
+}
+
+.@{prefix}-container.top .@{prefix}-controls {
+	top: 0;
+	bottom: inherit;
+}

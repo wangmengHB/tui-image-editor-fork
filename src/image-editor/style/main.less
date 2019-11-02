@@ -1,0 +1,201 @@
+
+
+body > textarea {
+	position: fixed !important;
+}
+
+
+.@{prefix}-container {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-height: 300px;
+	height: 100%;
+	position: relative;
+	background-color: #282828;
+	overflow: hidden;
+	letter-spacing: 0.3px;
+}
+
+.@{prefix}-container div,
+.@{prefix}-container ul,
+.@{prefix}-container label,
+.@{prefix}-container input,
+.@{prefix}-container li {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.@{prefix}-container .@{prefix}-header {
+/* BUTTON AND LOGO */
+	min-width: 533px;
+	position: absolute;
+	background-color: #151515;
+	top: 0;
+	width: 100%;
+}
+
+.@{prefix}-container .@{prefix}-header-buttons,
+.@{prefix}-container .@{prefix}-controls-buttons {
+	float: right;
+	margin: 8px;
+}
+
+.@{prefix}-container .@{prefix}-header-logo,
+.@{prefix}-container .@{prefix}-controls-logo {
+	float: left;
+	width: 30%;
+	padding: 17px;
+}
+
+.@{prefix}-container .@{prefix}-controls-logo,
+.@{prefix}-container .@{prefix}-controls-buttons {
+	width: 270px;
+	height: 100%;
+	display: none;
+}
+
+.@{prefix}-container .@{prefix}-header-buttons button,
+.@{prefix}-container .@{prefix}-header-buttons div,
+.@{prefix}-container .@{prefix}-controls-buttons button,
+.@{prefix}-container .@{prefix}-controls-buttons div {
+	display: inline-block;
+	position: relative;
+	width: 120px;
+	height: 40px;
+	padding: 0;
+	line-height: 40px;
+	outline: none;
+	border-radius: 20px;
+	border: 1px solid #ddd;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	vertical-align: middle;
+	letter-spacing: 0.3px;
+	text-align: center;
+}
+
+.@{prefix}-container .@{prefix}-download-btn {
+	background-color: #fdba3b;
+	border-color: #fdba3b;
+	color: #fff;
+}
+
+.@{prefix}-container .@{prefix}-load-btn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.@{prefix}-container .@{prefix}-main-container {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 64px;
+}
+
+.@{prefix}-container .@{prefix}-main {
+	position: absolute;
+	text-align: center;
+	top: 64px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.@{prefix}-container .@{prefix}-wrap {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+}
+
+.@{prefix}-container .@{prefix}-wrap .@{prefix}-size-wrap {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.@{prefix}-container .@{prefix}-wrap .@{prefix}-size-wrap .@{prefix}-align-wrap {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.@{prefix}-container .@{prefix} {
+	position: relative;
+	display: inline-block;
+}
+
+/* BIG MENU */
+.@{prefix}-container .@{prefix}-menu {
+	width: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.@{prefix}-container .@{prefix}-menu > .@{prefix}-item {
+	position: relative;
+	display: inline-block;
+	border-radius: 2px;
+	padding: 7px 8px 3px 8px;
+	cursor: pointer;
+	margin: 0 4px;
+}
+
+.@{prefix}-container .@{prefix}-menu > .@{prefix}-item[tooltip-content]:hover:before {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	margin: 0 auto 0;
+	width: 0;
+	height: 0;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #2f2f2f;
+	border-left: 7px solid transparent;
+	left: 13px;
+	top: -2px;
+}
+
+.@{prefix}-container .@{prefix}-menu > .@{prefix}-item[tooltip-content]:hover:after {
+	content: attr(tooltip-content);
+	position: absolute;
+	display: inline-block;
+	background-color: #2f2f2f;
+	color: #fff;
+	padding: 5px 8px;
+	font-size: 11px;
+	font-weight: lighter;
+	border-radius: 3px;
+	max-height: 23px;
+	top: -25px;
+	left: 0;
+	min-width: 24px;
+}
+
+.@{prefix}-container .@{prefix}-menu > .@{prefix}-item.active {
+	background-color: #fff;
+	transition: all 0.3s ease;
+}
+
+// .@{prefix}-container .@{prefix}-wrap {
+// 	position: absolute;
+// }
