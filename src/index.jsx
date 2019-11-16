@@ -103,9 +103,9 @@ export default class Demo extends React.Component {
     }
 
     this.editor = new ImageEditor(root, {
-        includeUI: {
+        uiOptions: {
             loadImage: {
-              // path: 'img/sampleImage2.png',
+              path: 'img/sampleImage2.png',
               name: 'SampleImage'
             },
             theme: whiteTheme, 
@@ -113,8 +113,7 @@ export default class Demo extends React.Component {
             menuBarPosition: 'bottom'
         },
         cssMaxWidth: 700,
-        cssMaxHeight: 500,
-        usageStatistics: false
+        cssMaxHeight: 900,
     });
 
     window.onresize = function() {
@@ -136,5 +135,7 @@ export default class Demo extends React.Component {
 
 
 const root = document.createElement('div');
+root.style.height = '700px';
+
 document.body.appendChild(root);
 ReactDOM.render(<Demo />, root);

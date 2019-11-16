@@ -11,14 +11,13 @@ import {defaultTextRangeValus} from '../consts';
  * @ignore
  */
 class Text extends Submenu {
-    constructor(subMenuElement, {locale, iconStyle, menuBarPosition, usageStatistics}) {
+    constructor(subMenuElement, {locale, iconStyle, menuBarPosition}) {
         super(subMenuElement, {
             locale,
             name: 'text',
             iconStyle,
             menuBarPosition,
-            templateHtml,
-            usageStatistics
+            templateHtml
         });
         this.effect = {
             bold: false,
@@ -30,7 +29,7 @@ class Text extends Submenu {
             textEffectButton: this.selector('#tie-text-effect-button'),
             textAlignButton: this.selector('#tie-text-align-button'),
             textColorpicker: new Colorpicker(
-                this.selector('#tie-text-color'), '#ffbb3b', this.toggleDirection, this.usageStatistics
+                this.selector('#tie-text-color'), '#ffbb3b', this.toggleDirection
             ),
             textRange: new Range(this.selector('#tie-text-range'), defaultTextRangeValus),
             textRangeValue: this.selector('#tie-text-range-value')

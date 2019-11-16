@@ -1,7 +1,7 @@
-import './polyfill';
+
 import ImageEditor from './imageEditor';
 import './style/index.less';
-// import './style/tui-image-editor.css';
+
 
 // commands
 import './command/addIcon';

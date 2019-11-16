@@ -11,14 +11,12 @@ class Submenu {
      * @param {Object} iconStyle - style of icon
      * @param {string} menuBarPosition - position of menu
      * @param {*} templateHtml - template for SubMenuElement
-     * @param {boolean} [usageStatistics=false] - template for SubMenuElement
      */
-    constructor(subMenuElement, {locale, name, iconStyle, menuBarPosition, templateHtml, usageStatistics}) {
+    constructor(subMenuElement, {locale, name, iconStyle, menuBarPosition, templateHtml}) {
         this.selector = str => subMenuElement.querySelector(str);
         this.menuBarPosition = menuBarPosition;
         this.toggleDirection = menuBarPosition === 'top' ? 'down' : 'up';
         this.colorPickerControls = [];
-        this.usageStatistics = usageStatistics;
         this._makeSubMenuElement(subMenuElement, {
             locale,
             name,

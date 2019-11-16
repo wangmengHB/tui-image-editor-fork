@@ -2,9 +2,8 @@
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
  * @fileoverview Util
  */
-import {forEach, sendHostname} from 'tui-code-snippet';
+import {forEach } from 'tui-code-snippet';
 const {min, max} = Math;
-let hostnameSent = false;
 
 
 export function clamp(value, minValue, maxValue) {
@@ -112,17 +111,6 @@ export function getRgb(color, alpha) {
     return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-    /**
-     * send hostname
-     */
-export function sendHostName() {
-  if (hostnameSent) {
-      return;
-  }
-  hostnameSent = true;
-
-  sendHostname('image-editor', 'UA-129999381-1');
-}
 
     /**
      * Apply css resource

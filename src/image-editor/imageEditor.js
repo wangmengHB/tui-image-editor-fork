@@ -9,7 +9,7 @@ import action from './action';
 import commandFactory from './factory/command';
 import Graphics from './graphics';
 import * as consts from './consts';
-import {sendHostName} from './util';
+
 
 const events = consts.eventNames;
 const commands = consts.commandNames;
@@ -21,17 +21,17 @@ const {isUndefined, forEach, CustomEvents} = snippet;
  * @class
  * @param {string|HTMLElement} wrapper - Wrapper's element or selector
  * @param {Object} [options] - Canvas max width & height of css
- *  @param {number} [options.includeUI] - Use the provided UI
- *    @param {Object} [options.includeUI.loadImage] - Basic editing image
- *      @param {string} options.includeUI.loadImage.path - image path
- *      @param {string} options.includeUI.loadImage.name - image name
- *    @param {Object} [options.includeUI.theme] - Theme object
- *    @param {Array} [options.includeUI.menu] - It can be selected when only specific menu is used. [default all]
- *    @param {string} [options.includeUI.initMenu] - The first menu to be selected and started.
- *    @param {Object} [options.includeUI.uiSize] - ui size of editor
- *      @param {string} options.includeUI.uiSize.width - width of ui
- *      @param {string} options.includeUI.uiSize.height - height of ui
- *    @param {string} [options.includeUI.menuBarPosition=bottom] - Menu bar position [top | bottom | left | right]
+ *  @param {number} [options.uiOptions] - Use the provided UI
+ *    @param {Object} [options.uiOptions.loadImage] - Basic editing image
+ *      @param {string} options.uiOptions.loadImage.path - image path
+ *      @param {string} options.uiOptions.loadImage.name - image name
+ *    @param {Object} [options.uiOptions.theme] - Theme object
+ *    @param {Array} [options.uiOptions.menu] - It can be selected when only specific menu is used. [default all]
+ *    @param {string} [options.uiOptions.initMenu] - The first menu to be selected and started.
+ *    @param {Object} [options.uiOptions.uiSize] - ui size of editor
+ *      @param {string} options.uiOptions.uiSize.width - width of ui
+ *      @param {string} options.uiOptions.uiSize.height - height of ui
+ *    @param {string} [options.uiOptions.menuBarPosition=bottom] - Menu bar position [top | bottom | left | right]
  *  @param {number} options.cssMaxWidth - Canvas css-max-width
  *  @param {number} options.cssMaxHeight - Canvas css-max-height
  *  @param {Object} [options.selectionStyle] - selection style
@@ -43,12 +43,12 @@ const {isUndefined, forEach, CustomEvents} = snippet;
  *  @param {number} [options.selectionStyle.lineWidth] - selection line width
  *  @param {string} [options.selectionStyle.borderColor] - selection border color
  *  @param {number} [options.selectionStyle.rotatingPointOffset] - selection rotating point length
- *  @param {Boolean} [options.usageStatistics=true] - Let us know the hostname. If you don't want to send the hostname, please set to false.
+ 
  * @example
  * var ImageEditor = require('tui-image-editor');
  * var blackTheme = require('./js/theme/black-theme.js');
  * var instance = new ImageEditor(document.querySelector('#tui-image-editor'), {
- *   includeUI: {
+ *   uiOptions: {
  *     loadImage: {
  *       path: 'img/sampleImage.jpg',
  *       name: 'SampleImage'
@@ -72,10 +72,7 @@ const {isUndefined, forEach, CustomEvents} = snippet;
  */
 export default class ImageEditor {
     constructor(wrapper, options) {
-        options = snippet.extend({
-            includeUI: false,
-            usageStatistics: true
-        }, options);
+        
 
         this.mode = null;
 
@@ -85,13 +82,9 @@ export default class ImageEditor {
          * UI instance
          * @type {Ui}
          */
-        if (options.includeUI) {
-            const UIOption = options.includeUI;
-            UIOption.usageStatistics = options.usageStatistics;
-
-            this.ui = new UI(wrapper, UIOption, this.getActions());
-            options = this.ui.setUiDefaultSelectionStyle(options);
-        }
+      
+        this.ui = new UI(wrapper, options.uiOptions, this.getActions());
+        options = this.ui.setUiDefaultSelectionStyle(options);
 
         /**
          * Invoker
@@ -145,15 +138,13 @@ export default class ImageEditor {
             applyGroupSelectionStyle: options.applyGroupSelectionStyle
         });
 
-        if (options.usageStatistics) {
-            sendHostName();
-        }
+        
 
         if (this.ui) {
             this.ui.initCanvas();
             this.setReAction();
         }
-        fabric.enableGLFiltering = false;
+        fabric.enableGLFiltering = true;
     }
 
     /**

@@ -11,14 +11,13 @@ import {defaultIconPath} from '../consts';
  * @ignore
  */
 class Icon extends Submenu {
-    constructor(subMenuElement, {locale, iconStyle, menuBarPosition, usageStatistics}) {
+    constructor(subMenuElement, {locale, iconStyle, menuBarPosition}) {
         super(subMenuElement, {
             locale,
             name: 'icon',
             iconStyle,
             menuBarPosition,
-            templateHtml,
-            usageStatistics
+            templateHtml
         });
 
         this.iconType = null;
@@ -28,7 +27,7 @@ class Icon extends Submenu {
             registIconButton: this.selector('#tie-icon-image-file'),
             addIconButton: this.selector('#tie-icon-add-button'),
             iconColorpicker: new Colorpicker(
-                this.selector('#tie-icon-color'), '#ffbb3b', this.toggleDirection, this.usageStatistics
+                this.selector('#tie-icon-color'), '#ffbb3b', this.toggleDirection
             )
         };
     }

@@ -55,14 +55,13 @@ const filterNameMap = {
  * @ignore
  */
 class Filter extends Submenu {
-    constructor(subMenuElement, {locale, iconStyle, menuBarPosition, usageStatistics}) {
+    constructor(subMenuElement, {locale, iconStyle, menuBarPosition}) {
         super(subMenuElement, {
             locale,
             name: 'filter',
             iconStyle,
             menuBarPosition,
-            templateHtml,
-            usageStatistics
+            templateHtml
         });
 
         this.selectBoxShow = false;
@@ -199,13 +198,13 @@ class Filter extends Submenu {
                 FILTER_RANGE.colorfilterThresholeRange
             ),
             filterTintColor: new Colorpicker(
-                selector('#tie-filter-tint-color'), '#03bd9e', this.toggleDirection, this.usageStatistics
+                selector('#tie-filter-tint-color'), '#03bd9e', this.toggleDirection
             ),
             filterMultiplyColor: new Colorpicker(
-                selector('#tie-filter-multiply-color'), '#515ce6', this.toggleDirection, this.usageStatistics
+                selector('#tie-filter-multiply-color'), '#515ce6', this.toggleDirection
             ),
             filterBlendColor: new Colorpicker(
-                selector('#tie-filter-blend-color'), '#ffbb3b', this.toggleDirection, this.usageStatistics
+                selector('#tie-filter-blend-color'), '#ffbb3b', this.toggleDirection
             )
         };
 
