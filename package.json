@@ -1,5 +1,5 @@
 {
-  "name": "image-editor",
+  "name": "tui-image-editor-fork",
   "version": "0.0.0-rc.1",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangmengHB/image-editor.git"
+    "url": "git+https://github.com/wangmengHB/tui-image-editor-fork.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangmengHB/image-editor/issues"
+    "url": "https://github.com/wangmengHB/tui-image-editor-fork/issues"
   },
-  "homepage": "https://github.com/wangmengHB/image-editor#readme",
+  "homepage": "https://github.com/wangmengHB/tui-image-editor-fork#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -52,6 +52,8 @@
   "dependencies": {
     "fabric": "^3.4.0",
     "tui-code-snippet": "^1.5.0",
-    "tui-color-picker": "^2.2.0"
+    "tui-color-picker": "^2.2.0",
+    "util-kit": "^0.0.0-rc.10",
+    "web-util-kit": "^0.0.0-rc.2"
   }
 }

@@ -119,8 +119,7 @@ export default class Demo extends React.Component {
     window.onresize = function() {
       if (this.editor) {
         this.editor.ui.resizeEditor();
-      }
-      
+      }     
     }
 
 
